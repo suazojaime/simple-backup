@@ -1,0 +1,13 @@
+services:
+  simple-backup:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: backup-service
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs/
+      - ./assets.yml:/app/assets.yml
+      - /mnt/nas_mount:/mnt/nas_mount/
+      - /mnt/backup:/mnt/backup/
+      - ./cronjob:/app/cronjob

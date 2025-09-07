@@ -1,0 +1,11 @@
+foldertest:
+    source_path: '/mnt/nas_mount/cv/'
+    destination_path: '/mnt/backup/test/'
+    frequency_minutes: 30
+    
+foldertest2:
+    source_path: '/mnt/nas_mount/landingpage/'
+    destination_path: '/mnt/backup/landingpage/'
+    frequency_minutes: 30
+    
+    

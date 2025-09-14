@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: dockerfile
     container_name: backup-service
-    restart: unless-stopped
+    #restart: unless-stopped
     volumes:
       - ./logs:/app/logs/
       - ./assets.yml:/app/assets.yml

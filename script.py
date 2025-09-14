@@ -39,7 +39,8 @@ for n in assets:
     source_path = conf_yml[n]['source_path']
     destination_path = conf_yml[n]['destination_path']
     lockfile = f'''/tmp/{n}_rsync_backup.lock'''
-    command = f'''flock -n {lockfile} bash -c 'nohup rsync -avhc --delete  {source_path} {destination_path} > /app/logs/{n}_{timestamp}.log 2>&1 &' '''
+    command = f'''flock -n {lockfile} bash -c 'nohup rsync -avh --delete  {source_path} {destination_path} > /app/logs/{n}_{timestamp}.log 2>&1 &' '''
+    # avhc
     print(command)
     try:
         result = subprocess.run(command, shell=True)

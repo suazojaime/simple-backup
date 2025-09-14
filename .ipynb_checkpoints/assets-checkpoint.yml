@@ -1,6 +1,6 @@
-foldertest:
-    source_path: '/mnt/nas_mount/cv/'
-    destination_path: '/mnt/backup/test/'
+movies:
+    source_path: '/mnt/nas_mount/Movies/'
+    destination_path: '/mnt/backup/backup/Movies/'
     frequency_minutes: 30
     
 foldertest2:
